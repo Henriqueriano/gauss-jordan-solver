@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GaussJordanSolver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f2b73387b44c2579f2929c9b94f00efbea7a2e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ac94fc0b568162a46fc4e565aea4f74656d05de")]
 [assembly: System.Reflection.AssemblyProductAttribute("GaussJordanSolver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GaussJordanSolver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

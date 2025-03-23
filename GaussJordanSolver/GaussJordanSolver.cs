@@ -11,12 +11,11 @@ class GaussJordanSolver
             {
                 if (matrix[i, i] == 0)
                 {
-                    for (int j = 0; j < matrix.GetLength(1); j++)
+                    for (int j = 0; j < matrix.GetLength(0); j++)
                     {
-                        //if (matrix[j, i] != 0)
-                        //    SwapMatrix(matrix, i, j);
-                        //else throw new Exception("Singular Matrix");
-                        continue;
+                        if (matrix[j, i] != 0)
+                            SwapLine(matrix, i, j);
+                        else throw new Exception("singular matrix");
                     }
                 }
                 // Ln < -Ln / matrix[i][i]
@@ -42,29 +41,32 @@ class GaussJordanSolver
             for (int i = 0; i < matrix.GetLength(0); i++)
                 solvedArray[i] = matrix[i, matrix.GetLength(1) - 1];
         }
-        //printSolveMatrix(matrix);
         return solvedArray;
     }
-    public void printSolveMatrix(double[,] matrix)
+    public void PrintSolvedMatrix(double[,] matrix)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        double[,] _matrix = new double[matrix.GetLength(0), matrix.GetLength(1)];
+        Array.Copy(matrix, _matrix, matrix.Length);
+        // In this case, the result is despised, I only need the result:
+        Solve(_matrix);
+        Console.WriteLine("Solved Matrix:");
+        for (int i = 0; i < _matrix.GetLength(0); i++)
         {
-            Console.Write(" | ");
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            Console.Write("| ");
+            for (int j = 0; j < _matrix.GetLength(1); j++)
             {
-                Console.Write($"{matrix[i, j]}, ");
+                Console.Write($"{_matrix[i, j]}, ");
             }
-            Console.WriteLine(" | ");
+            Console.WriteLine("|");
         }
     }
-    public void printSolve(double[] solvedMatrix)
+    public void PrintSolution(double[] solvedMatrix)
     {
         Console.WriteLine("Rounded Solution:");
         Console.Write("| ");
         for (int i = 0; i < solvedMatrix.Length; i++)
             Console.Write($"{Math.Round(solvedMatrix[i])}, ");
-        Console.Write(" |");
-
+        Console.WriteLine("|");
     }
     private double CalculateDeterminant(double[,] matrix)
     {
@@ -75,16 +77,7 @@ class GaussJordanSolver
         {
             if (_matrix[i, i] == 0)
             {
-                for (int j = 1; j < _matrix.GetLength(1); j++)
-                {
-                    //if (_matrix[j,i] != 0)
-                    //{
-                    //    double[] mainBucket = _matrix[j];
-                    //    SwapMatrix(_matrix, i, j);
-                    //}
-                    //else throw new Exception("Singular Matrix");
-                    continue;
-                }
+                throw new Exception("Singular Matrix.");
             }
             for (int j = i + 1; j < _matrix.GetLength(0); j++)
             {
@@ -107,11 +100,14 @@ class GaussJordanSolver
             return false;
         return true;
     }
-    private double[][] SwapMatrix(double[][] matrix, int iIndex, int jIndex)
+    private void SwapLine(double[,] matrix, int indexOne, int indexTwo)
     {
-        double[] bucket = matrix[iIndex];
-        matrix[iIndex] = matrix[jIndex];
-        matrix[jIndex] = bucket;
-        return matrix;
+        //https://stackoverflow.com/questions/5375233/swap-elements-in-a-2d-array-c-sharp
+        for (int i = 0; i <= matrix.GetUpperBound(1); ++i)
+        {
+            var t = matrix[indexOne, i];
+            matrix[indexOne, i] = matrix[indexTwo, i];
+            matrix[indexTwo, i] = t;
+        }
     }
 }
