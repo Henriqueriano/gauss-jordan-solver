@@ -1,0 +1,14 @@
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.GeneratedMSBuildEditorConfig.editorconfig
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.AssemblyInfoInputs.cache
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.AssemblyInfo.cs
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.csproj.CoreCompileInputs.cache
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\bin\Debug\net9.0\GaussJordanSolver.exe
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\bin\Debug\net9.0\GaussJordanSolver.deps.json
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\bin\Debug\net9.0\GaussJordanSolver.runtimeconfig.json
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\bin\Debug\net9.0\GaussJordanSolver.dll
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\bin\Debug\net9.0\GaussJordanSolver.pdb
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.dll
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\refint\GaussJordanSolver.dll
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.pdb
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\GaussJordanSolver.genruntimeconfig.cache
+E:\CC\CC6N\Calc. Numéri. Computacional\Algorimo de GaussJordan\GaussJordanSolver\obj\Debug\net9.0\ref\GaussJordanSolver.dll
