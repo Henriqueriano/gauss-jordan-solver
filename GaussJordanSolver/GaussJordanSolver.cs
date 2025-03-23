@@ -12,11 +12,9 @@ class GaussJordanSolver
                 if (matrix[i, i] == 0)
                 {
                     for (int j = 0; j < matrix.GetLength(0); j++)
-                    {
                         if (matrix[j, i] != 0)
                             SwapLine(matrix, i, j);
                         else throw new Exception("singular matrix");
-                    }
                 }
                 // Ln < -Ln / matrix[i][i]
                 if (matrix[i, i] != 1)
@@ -32,9 +30,7 @@ class GaussJordanSolver
                     {
                         double coef = matrix[j, i];
                         for (int k = 0; k < matrix.GetLength(1); k++)
-                        {
                             matrix[j, k] -= coef * matrix[i, k];
-                        }
                     }
                 }
             }
@@ -45,6 +41,7 @@ class GaussJordanSolver
     }
     public void PrintSolvedMatrix(double[,] matrix)
     {
+        // Mimic Matrix:
         double[,] _matrix = new double[matrix.GetLength(0), matrix.GetLength(1)];
         Array.Copy(matrix, _matrix, matrix.Length);
         // In this case, the result is despised, I only need the result:
@@ -54,9 +51,7 @@ class GaussJordanSolver
         {
             Console.Write("| ");
             for (int j = 0; j < _matrix.GetLength(1); j++)
-            {
                 Console.Write($"{_matrix[i, j]}, ");
-            }
             Console.WriteLine("|");
         }
     }
@@ -70,15 +65,14 @@ class GaussJordanSolver
     }
     private double CalculateDeterminant(double[,] matrix)
     {
+        // Mimic Matrix:
         double[,] _matrix = new double[matrix.GetLength(0), matrix.GetLength(1)];
         Array.Copy(matrix, _matrix, matrix.Length);
         double determinant = 1.0;
         for (int i = 0; i < _matrix.GetLength(0); i++)
         {
             if (_matrix[i, i] == 0)
-            {
                 throw new Exception("Singular Matrix.");
-            }
             for (int j = i + 1; j < _matrix.GetLength(0); j++)
             {
                 double coef = _matrix[j, i] / _matrix[i, i];
